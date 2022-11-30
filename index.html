@@ -10,6 +10,20 @@
 <body>
   <script src="scripts.js" defer></script>
 
-  <div id="container"></div>
+  <h1>Etch A Sketch</h1>
+  <div class="container">
+    <div class="buttons">
+      <button class="pen">Pen</button>
+      <button class="eraser">Eraser</button>
+      <button class="reset">Reset</button>
+    </div>
+    <div>
+      <input type="text" placeholder="Size of Board" value="16" onchange="changeSize(this.value)">
+      <button>Set Size</button>
+      <div class="board"></div>
+    </div>
+  </div>
+  
 </body>
 </html>
+ 
