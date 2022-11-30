@@ -1,1 +1,7 @@
-
+.board {
+  display: grid;
+  height: 750px;
+  width: 750px;
+  border: 4px solid;
+  border-radius: 5px;
+}
