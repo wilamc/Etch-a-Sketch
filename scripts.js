@@ -1,7 +1,13 @@
-const defaultSize = 16
-const board = document.querySelector('.board')
+const defaultSize = 16;
+const board = document.querySelector('.board');
 const resetBtn = document.querySelector('.reset');
-const eraserBtn = document.querySelector('.eraser')
+const eraserBtn = document.querySelector('.eraser');
+const penBtn = document.querySelector('.pen')
+let currentColor = 'black';
+
+resetBtn.onclick = () => resetBoard()
+eraserBtn.onclick = () => changeColor('powderblue')
+penBtn.onclick = () => changeColor('black')
 
 createBoard(defaultSize);
 
@@ -13,7 +19,7 @@ function createBoard(size) {
   let amount = size * size;
   for (let i = 0; i < amount; i++) {
     let square = document.createElement('div');
-    square.addEventListener('mouseover', penBoard)
+    square.addEventListener('mouseover', drawPen)
     square.classList.add('square')
     square.style.backgroundColor = 'powderblue';
     board.insertAdjacentElement("beforeend", square);
@@ -33,24 +39,16 @@ function changeSize(size) {
   }
 }
 
-function penBoard() {
-  this.style.backgroundColor = 'black';
+function drawPen() {
+  this.style.backgroundColor = currentColor;
+
 }
 
-document.addEventListener('click', (e) => {
-  const reset = e.target.classList.contains('reset');
-  if (reset == true) {
-    location.reload();
-  }
-})
+function changeColor(color) {
+  currentColor = color
+  return currentColor
+}
 
-document.addEventListener('click', (e) => {
-  const eraser = e.target.classList.contains('eraser');
-  
-  if (eraser == true) {
-    const square = document.querySelectorAll('.square')
-    square.addEventListener('mouseover', (e) => {
-    e.target.style.backgroundColor = 'powderblue';
-    })
-  }
-})
+function resetBoard() {
+  location.reload();
+}
