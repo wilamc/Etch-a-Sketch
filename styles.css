@@ -1,37 +1,47 @@
 .board {
   display: grid;
-  height: 750px;
-  width: 750px;
+  height: 600px;
+  width: 600px;
   border: 4px solid;
   border-radius: 5px;
 }
 
 .container {
-  margin: 50px;
-  border-style: solid;
-
+  display: flex;
+  padding-left: 175px;
 }
 
 body {
   background-color:azure;
-  display: flex;
 }
 
 button {
-  background-color:lightgray;
-  width: 100px;
-  height: 25px;
   border-radius: 10px;
+  color:brown
+}
+
+button:hover {
+  background-color:lightgray;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
 h1 {
   display: flex;
-  border-style: solid;
+  justify-content: center;
+  font-family: fantasy;
+  color:brown
 }
 
 .buttons {
-  border-style: solid;
   display: flex;
   flex-direction: column;
-  margin: 100px;
+  justify-content: center;
+  width: 75px;
+}
+
+.setsize {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5px;
 }
