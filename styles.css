@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+
 .board {
   display: grid;
   height: 600px;
@@ -7,8 +9,8 @@
 }
 
 .container {
-  display: flex;
-  padding-left: 175px;
+  display: grid;
+  justify-content: center;
 }
 
 body {
@@ -17,7 +19,7 @@ body {
 
 button {
   border-radius: 10px;
-  color:brown
+  color:brown;
 }
 
 button:hover {
@@ -26,22 +28,22 @@ button:hover {
 }
 
 h1 {
-  display: flex;
+  display: grid;
   justify-content: center;
-  font-family: fantasy;
-  color:brown
+  font-family: 'Courgette', cursive;
+  color: brown;
+  border-style: solid;
 }
 
 .buttons {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  width: 75px;
 }
 
 .setsize {
-  display: flex;
+  display: grid;
   flex-direction: column;
   justify-content: center;
   padding: 5px;
+
 }
